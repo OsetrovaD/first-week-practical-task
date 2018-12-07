@@ -4,6 +4,8 @@ import java.util.List;
 
 public class ClerkService {
 
+    private static final int TWENTY_FIVE_IN_SEVENTY_FIVE_NUMBER = 3;
+
     public boolean hasClerkEnoughMoney(Clerk clerk, List<Visitor> visitors) {
         boolean result = false;
 
@@ -19,7 +21,7 @@ public class ClerkService {
                     if (clerk.getFiftyDollarNumber() != 0) {
                         clerk.addHundredDollar();
                         clerk.giveChangeWithFiftyDollar();
-                    } else if (clerk.getTwentyFiveDollarNumber() >= 3) {
+                    } else if (clerk.getTwentyFiveDollarNumber() >= TWENTY_FIVE_IN_SEVENTY_FIVE_NUMBER) {
                         clerk.addHundredDollar();
                         clerk.giveChangeThreeTwentyFiveDollar();
                     } else {

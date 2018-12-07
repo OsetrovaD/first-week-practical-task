@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public class Clerk {
 
+    private static final int IN_SEVENTY_FIVE_NUMBER = 3;
     private int twentyFiveDollarNumber = 0;
     private int fiftyDollarNumber = 0;
     private int hundredDollarNumber = 0;
@@ -37,6 +38,6 @@ public class Clerk {
     }
 
     public void giveChangeThreeTwentyFiveDollar() {
-        twentyFiveDollarNumber -= 3;
+        twentyFiveDollarNumber -= IN_SEVENTY_FIVE_NUMBER;
     }
 }
