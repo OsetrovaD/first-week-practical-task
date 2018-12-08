@@ -15,12 +15,15 @@ public class ExecutionTimeCounterServiceTest {
     public void checkThreeBuyersOneCashDeskTime() {
         Buyer firstBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.POTATO, Product.CHOCOLATE, Product.MILK, Product.APPLE, Product.FISH))
+                .priority(1)
                 .build();
         Buyer secondBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.LEMON, Product.CHOCOLATE, Product.STRAWBERRY))
+                .priority(2)
                 .build();
         Buyer thirdBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.ICE_CREAM, Product.MINERAL_WATER, Product.CHEESE, Product.CHOCOLATE))
+                .priority(3)
                 .build();
 
         PriorityQueue<Buyer> buyers = new PriorityQueue<>();
@@ -45,15 +48,19 @@ public class ExecutionTimeCounterServiceTest {
                         Product.POTATO, Product.BREAD, Product.CHEESE, Product.CHOCOLATE, Product.FISH,
                         Product.ICE_CREAM, Product.BREAD, Product.APPLE, Product.MINERAL_WATER, Product.MILK
                 ))
+                .priority(1)
                 .build();
         Buyer secondBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.LEMON, Product.CHOCOLATE))
+                .priority(2)
                 .build();
         Buyer thirdBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.MINERAL_WATER, Product.BREAD, Product.LEMON))
+                .priority(3)
                 .build();
         Buyer fourthBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.POTATO, Product.BREAD, Product.CHEESE))
+                .priority(4)
                 .build();
 
         PriorityQueue<Buyer> buyers = new PriorityQueue<>();
@@ -76,15 +83,18 @@ public class ExecutionTimeCounterServiceTest {
     public void checkThreeBuyersTwoCashDesksTime() {
         Buyer firstBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.POTATO, Product.BREAD))
+                .priority(1)
                 .build();
         Buyer secondBuyer = Buyer.builder()
                 .products(Arrays.asList(Product.CHEESE, Product.CHOCOLATE, Product.CHOCOLATE))
+                .priority(2)
                 .build();
         Buyer thirdBuyer = Buyer.builder()
                 .products(Arrays.asList(
                         Product.MILK, Product.BREAD, Product.MINERAL_WATER, Product.CHOCOLATE, Product.MILK,
                         Product.APPLE, Product.ICE_CREAM, Product.APPLE, Product.STRAWBERRY, Product.LEMON
                 ))
+                .priority(3)
                 .build();
 
         PriorityQueue<Buyer> buyers = new PriorityQueue<>();

@@ -16,6 +16,7 @@ public class Buyer implements Runnable, Comparable<Buyer> {
 
     private Semaphore cashDesk;
     private List<Product> products;
+    private Integer priority;
 
     @Override
     public void run() {
@@ -32,7 +33,7 @@ public class Buyer implements Runnable, Comparable<Buyer> {
     }
 
     @Override
-    public int compareTo(Buyer o) {
-        return Thread.currentThread().getName().compareTo(new Thread(o).getName());
+    public int compareTo(Buyer buyer) {
+        return priority.compareTo(buyer.priority);
     }
 }
